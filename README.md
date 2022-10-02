@@ -2,6 +2,18 @@
 
 Installer et utiliser Bootstrap 5 en version Sass pour en tirer le meilleur profit, et le customiser à notre guise.
 
+- [Doc Bootstrap 5](#doc-bootstrap-5)
+  - [Installation](#installation)
+  - [Utilisation](#utilisation)
+    - [Boilerplate](#boilerplate)
+    - [Utiliser Bootstrap dans notre projet](#utiliser-bootstrap-dans-notre-projet)
+      - [Feuilles de style](#feuilles-de-style)
+      - [Javascript](#javascript)
+  - [Maintenance](#maintenance)
+  - [Ressources utiles](#ressources-utiles)
+
+>Si vous cloner ce dépot, [pensez à installer Bootstrap 5](#installation).
+
 ## Installation
 
 - télécharger [les Sources Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/download/#source-files)
