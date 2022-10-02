@@ -51,8 +51,9 @@ $display-font-sizes: (
 );
 $display-font-weight: $font-weight-light;
 $display-line-height: $headings-line-height;
+
 // Lead styles
-$lead-font-size: $font-size-base * 1.25;
+$lead-font-size: $font-size-base * 3;
 $lead-font-weight: $font-weight-light;
 
 // Required: vous devez importer ces fichiers, ils font partie du core de Bootstrap
@@ -63,8 +64,8 @@ $lead-font-weight: $font-weight-light;
 
 // Optional Bootstrap CSS: ici nous importants en fonction de nos besoins les sources pour différents composants
 @import "./bootstrap-5.2.1/scss/reboot";
-// @import "./bootstrap-5.2.1/scss/type";
-// @import "./bootstrap-5.2.1/scss/images";
+@import "./bootstrap-5.2.1/scss/type";
+@import "./bootstrap-5.2.1/scss/images";
 // @import "./bootstrap-5.2.1/scss/containers";
 // @import "./bootstrap-5.2.1/scss/grid";
 // @import "./bootstrap-5.2.1/scss/tables";
