@@ -79,6 +79,7 @@ Votre code scss
 */
 
 // Required: vous devez importer ces fichiers, ils font partie du core de Bootstrap
+@import "./bootstrap-5.2.1/scss/maps";
 @import "./bootstrap-5.2.1/scss/mixins";
 @import "./bootstrap-5.2.1/scss/root";
 
