@@ -17,10 +17,12 @@ Installer et utiliser Bootstrap 5 en version Sass pour en tirer le meilleur et l
 
 ## Installation
 
-- télécharger [les Sources Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/download/#source-files)
+- télécharger [les Sources Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/download/#source-files) ou rendez-vous directement sur le github de Bootstrap et [télécharger la dernière version](https://github.com/twbs/bootstrap/releases/tag/v5.2.1)
 - installer un compilateur [Sass](https://fr.wikipedia.org/wiki/Sass_(langage)), comme [Dart Sass](https://sass-lang.com/dart-sass)
 - extraire le contenu de l'archive des sources de Bootstrap 5
 - supprimer l'archive
+
+>A la création de cette documentation, la dernière version stable de Bootstrap est la 5.2.1. D'ici là, une nouvelle version peut être accessible. Adaptez l'installation à la dernière version en cours
 
 ## Utilisation
 
@@ -35,13 +37,11 @@ Nous allons utiliser les fichiers [sass](https://fr.wikipedia.org/wiki/Sass_(lan
 Votre projet devrait ressember à ça
 
 ~~~bash
-bootstrap-5.0.2/
+bootstrap-5.2.1/
 index.html
 style.scss
 script.js
 ~~~
-
->A l'écriture de cette doc, la version de Bootstrap est la 5.0.2, ce qui peut être amené à changer si vous lisez cette doc plus tard.
 
 On laisse le projet comme ça, quand Bootstrap sortira une nouvelle version, vous n'aurez qu'à la télécharger, à l'extraire et à redéfinir le PATH vers les sources. Et c'est tout ! Ainsi, le projet est facile à maintenir. 
 
@@ -56,7 +56,7 @@ Voici à quoi devrait ressembler notre fichier source `style.scss`
 >Attention, l'ordre des import doit être respecté !
 ~~~scss
 // Required
-@import "./bootstrap-5.0.2/scss/functions";
+@import "./bootstrap-5.2.1/scss/functions";
 
 // Default variable overrides : ici nous allons écraser la valeur par défaut de variables Bootstrap
 
@@ -67,7 +67,7 @@ Votre code scss
 */
 
 // Required
-@import "./bootstrap-5.0.2/scss/variables";
+@import "./bootstrap-5.2.1/scss/variables";
 
 // Variable value using existing variable : ici nous allons modifier la valeur de variables Bootstrap à l'aide de variables qui existent déjà, nous allons aussi définir nos propres variables Sass
 
@@ -79,48 +79,48 @@ Votre code scss
 */
 
 // Required: vous devez importer ces fichiers, ils font partie du core de Bootstrap
-@import "./bootstrap-5.0.2/scss/mixins";
-@import "./bootstrap-5.0.2/scss/root";
+@import "./bootstrap-5.2.1/scss/mixins";
+@import "./bootstrap-5.2.1/scss/root";
 
 
 // Optional Bootstrap CSS: ici nous importants en fonction de nos besoins les sources pour différents composants
-// @import "./bootstrap-5.0.2/scss/reboot";
-// @import "./bootstrap-5.0.2/scss/type";
-// @import "./bootstrap-5.0.2/scss/images";
-// @import "./bootstrap-5.0.2/scss/containers";
-// @import "./bootstrap-5.0.2/scss/grid";
-// @import "./bootstrap-5.0.2/scss/tables";
-// @import "./bootstrap-5.0.2/scss/forms";
-// @import "./bootstrap-5.0.2/scss/buttons";
-// @import "./bootstrap-5.0.2/scss/transitions";
-// @import "./bootstrap-5.0.2/scss/dropdown";
-// @import "./bootstrap-5.0.2/scss/button-group";
-// @import "./bootstrap-5.0.2/scss/nav";
-// @import "./bootstrap-5.0.2/scss/navbar";
-// @import "./bootstrap-5.0.2/scss/card";
-// @import "./bootstrap-5.0.2/scss/accordion";
-// @import "./bootstrap-5.0.2/scss/breadcrumb";
-// @import "./bootstrap-5.0.2/scss/pagination";
-// @import "./bootstrap-5.0.2/scss/badge";
-// @import "./bootstrap-5.0.2/scss/alert";
-// @import "./bootstrap-5.0.2/scss/progress";
-// @import "./bootstrap-5.0.2/scss/list-group";
-// @import "./bootstrap-5.0.2/scss/close";
-// @import "./bootstrap-5.0.2/scss/toasts";
-// @import "./bootstrap-5.0.2/scss/modal";
-// @import "./bootstrap-5.0.2/scss/tooltip";
-// @import "./bootstrap-5.0.2/scss/popover";
-// @import "./bootstrap-5.0.2/scss/carousel";
-// @import "./bootstrap-5.0.2/scss/spinners";
-// @import "./bootstrap-5.0.2/scss/offcanvas";
-// @import "./bootstrap-5.0.2/scss/placeholders";
+// @import "./bootstrap-5.2.1/scss/reboot";
+// @import "./bootstrap-5.2.1/scss/type";
+// @import "./bootstrap-5.2.1/scss/images";
+// @import "./bootstrap-5.2.1/scss/containers";
+// @import "./bootstrap-5.2.1/scss/grid";
+// @import "./bootstrap-5.2.1/scss/tables";
+// @import "./bootstrap-5.2.1/scss/forms";
+// @import "./bootstrap-5.2.1/scss/buttons";
+// @import "./bootstrap-5.2.1/scss/transitions";
+// @import "./bootstrap-5.2.1/scss/dropdown";
+// @import "./bootstrap-5.2.1/scss/button-group";
+// @import "./bootstrap-5.2.1/scss/nav";
+// @import "./bootstrap-5.2.1/scss/navbar";
+// @import "./bootstrap-5.2.1/scss/card";
+// @import "./bootstrap-5.2.1/scss/accordion";
+// @import "./bootstrap-5.2.1/scss/breadcrumb";
+// @import "./bootstrap-5.2.1/scss/pagination";
+// @import "./bootstrap-5.2.1/scss/badge";
+// @import "./bootstrap-5.2.1/scss/alert";
+// @import "./bootstrap-5.2.1/scss/progress";
+// @import "./bootstrap-5.2.1/scss/list-group";
+// @import "./bootstrap-5.2.1/scss/close";
+// @import "./bootstrap-5.2.1/scss/toasts";
+// @import "./bootstrap-5.2.1/scss/modal";
+// @import "./bootstrap-5.2.1/scss/tooltip";
+// @import "./bootstrap-5.2.1/scss/popover";
+// @import "./bootstrap-5.2.1/scss/carousel";
+// @import "./bootstrap-5.2.1/scss/spinners";
+// @import "./bootstrap-5.2.1/scss/offcanvas";
+// @import "./bootstrap-5.2.1/scss/placeholders";
 
 // Helpers
-@import "./bootstrap-5.0.2/scss/helpers";
+@import "./bootstrap-5.2.1/scss/helpers";
 // Utilities
-@import "./bootstrap-5.0.2/scss/utilities";
+@import "./bootstrap-5.2.1/scss/utilities";
 // Utilities API
-@import "./bootstrap-5.0.2/scss/utilities/api";
+@import "./bootstrap-5.2.1/scss/utilities/api";
 
 ~~~
 
