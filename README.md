@@ -1,15 +1,16 @@
 # Doc Bootstrap 5
 
-Installer et utiliser Bootstrap 5 en version Sass pour en tirer le meilleur profit, et le customiser à notre guise.
+Installer et utiliser Bootstrap 5 en version Sass pour en tirer le meilleur et le customiser à votre guise.
 
 - [Doc Bootstrap 5](#doc-bootstrap-5)
   - [Installation](#installation)
   - [Utilisation](#utilisation)
-    - [Boilerplate](#boilerplate)
-    - [Utiliser Bootstrap dans notre projet](#utiliser-bootstrap-dans-notre-projet)
-      - [Feuilles de style](#feuilles-de-style)
-      - [Javascript](#javascript)
+    - [*Boilerplate* et setup](#boilerplate-et-setup)
+    - [Feuilles de style (SCSS)](#feuilles-de-style-scss)
+    - [Javascript](#javascript)
   - [Maintenance](#maintenance)
+  - [Sass basics](#sass-basics)
+  - [Bootstrap core](#bootstrap-core)
   - [Ressources utiles](#ressources-utiles)
 
 >Si vous cloner ce dépot, [pensez à installer Bootstrap 5](#installation).
@@ -25,7 +26,7 @@ Installer et utiliser Bootstrap 5 en version Sass pour en tirer le meilleur prof
 
 Nous allons utiliser les fichiers [sass](https://fr.wikipedia.org/wiki/Sass_(langage)) de Bootstrap. On ne veut pas des sources précompilées (ni en local ni en CDN): on veut pouvoir recompiler les sources afin d'utiliser le framework et toutes ses capacités de personnalisation.
 
-### Boilerplate
+### *Boilerplate* et setup
 
 - créer vos fichiers `index.html`, `style.scss` et `script.js`
 - link votre feuille de style `style.css` (qui n'existe pas encore!) à votre fichier HTML
@@ -44,9 +45,7 @@ script.js
 
 On laisse le projet comme ça, quand Bootstrap sortira une nouvelle version, vous n'aurez qu'à la télécharger, à l'extraire et à redéfinir le PATH vers les sources. Et c'est tout ! Ainsi, le projet est facile à maintenir. 
 
-### Utiliser Bootstrap dans notre projet
-
-#### Feuilles de style
+### Feuilles de style (SCSS)
 
 Le point d'entrée de l'import de Bootstrap est le fichier `style.scss`. *Vous ne devez et n'avez pas à modifier directement les sources de Bootstrap*.
 
@@ -56,21 +55,102 @@ Voici à quoi devrait ressembler notre fichier source `style.scss`
 
 >Attention, l'ordre des import doit être respecté !
 ~~~scss
+// Required
+@import "./bootstrap-5.0.2/scss/functions";
+
+// Default variable overrides : ici nous allons écraser la valeur par défaut de variables Bootstrap
+
+/**
+
+Votre code scss
+
+*/
+
+// Required
+@import "./bootstrap-5.0.2/scss/variables";
+
+// Variable value using existing variable : ici nous allons modifier la valeur de variables Bootstrap à l'aide de variables qui existent déjà, nous allons aussi définir nos propres variables Sass
+
+
+/**
+
+Votre code scss
+
+*/
+
+// Required: vous devez importer ces fichiers, ils font partie du core de Bootstrap
+@import "./bootstrap-5.0.2/scss/mixins";
+@import "./bootstrap-5.0.2/scss/root";
+
+
+// Optional Bootstrap CSS: ici nous importants en fonction de nos besoins les sources pour différents composants
+// @import "./bootstrap-5.0.2/scss/reboot";
+// @import "./bootstrap-5.0.2/scss/type";
+// @import "./bootstrap-5.0.2/scss/images";
+// @import "./bootstrap-5.0.2/scss/containers";
+// @import "./bootstrap-5.0.2/scss/grid";
+// @import "./bootstrap-5.0.2/scss/tables";
+// @import "./bootstrap-5.0.2/scss/forms";
+// @import "./bootstrap-5.0.2/scss/buttons";
+// @import "./bootstrap-5.0.2/scss/transitions";
+// @import "./bootstrap-5.0.2/scss/dropdown";
+// @import "./bootstrap-5.0.2/scss/button-group";
+// @import "./bootstrap-5.0.2/scss/nav";
+// @import "./bootstrap-5.0.2/scss/navbar";
+// @import "./bootstrap-5.0.2/scss/card";
+// @import "./bootstrap-5.0.2/scss/accordion";
+// @import "./bootstrap-5.0.2/scss/breadcrumb";
+// @import "./bootstrap-5.0.2/scss/pagination";
+// @import "./bootstrap-5.0.2/scss/badge";
+// @import "./bootstrap-5.0.2/scss/alert";
+// @import "./bootstrap-5.0.2/scss/progress";
+// @import "./bootstrap-5.0.2/scss/list-group";
+// @import "./bootstrap-5.0.2/scss/close";
+// @import "./bootstrap-5.0.2/scss/toasts";
+// @import "./bootstrap-5.0.2/scss/modal";
+// @import "./bootstrap-5.0.2/scss/tooltip";
+// @import "./bootstrap-5.0.2/scss/popover";
+// @import "./bootstrap-5.0.2/scss/carousel";
+// @import "./bootstrap-5.0.2/scss/spinners";
+// @import "./bootstrap-5.0.2/scss/offcanvas";
+// @import "./bootstrap-5.0.2/scss/placeholders";
+
+// Helpers
+@import "./bootstrap-5.0.2/scss/helpers";
+// Utilities
+@import "./bootstrap-5.0.2/scss/utilities";
+// Utilities API
+@import "./bootstrap-5.0.2/scss/utilities/api";
+
 ~~~
 
-Compilez votre fichier style.scss en fichier css interprétable par votre navigateur
+Compilez votre fichier `style.scss` en fichier CSS interprétable par votre navigateur
 
 ~~~bash
 sass style.scss style.css
 ~~~
 
-#### Javascript
+Ouvrez le fichier `index.html` dans votre navigateur favori pour constater le résultat.
+
+>Vous pouvez bien sûr ensuite décomposer votre code scss en différents fichiers ou [partials](https://sass-lang.com/guide) et les importer (`@use`) dans le fichier `style.scss`
+
+### Javascript
+
+A venir...
 
 ## Maintenance
 
 Vous n'avez pas besoin de versionner les sources de Bootstrap, seulement votre fichier `style.scss`. Vous pouvez télécharger Bootstrap à votre guise sur n'importe quelle machine afin de le brancher à votre projet.
 
 Comme nous ne touchons pas directement aux sources, nous pouvons maintenir facilement notre projet et mettre à jour Bootstrap en cas de besoin.
+
+## Sass basics
+
+A venir...
+
+## Bootstrap core
+
+A venir...
 
 ## Ressources utiles
 
